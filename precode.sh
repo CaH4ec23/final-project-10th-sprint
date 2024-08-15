@@ -10,18 +10,18 @@ mkdir -p task/dir1 task/dir2 task/dir3/dir4
 # изменяем текущую директорию на task
 cd task
 # создаём пустой файл task/dir2/empty
-touch dir2/emptytouch dir2/empty
+touch dir2/empty
 # создаём файл task/dir2/hello.sh с таким содержанием:
 # #!/bin/bash
 # echo "$1, привет!"
 echo '#!/bin/bash
 echo "$1, привет!"' > dir2/hello.sh
 # устанавливаем для task/dir2/hello.sh права rwxrw-r--
-chmod 764 dir2/hello.shchmod 764 dir2/hello.sh
+chmod 764 dir2/hello.sh
 # сохраняем список файлов task/dir2 в task/dir2/list.txt
-ls dir2 > dir2/list.txtls dir2 > dir2/list.txt
+ls dir2 > dir2/list.txt
 # копируем содержимое каталога task/dir2 в каталог task/dir3/dir4
-cp -r -T dir2 dir3/dir4cp -r -T dir2 dir3/dir4
+cp -r -T dir2 dir3/dir4
 # записываем в task/dir1/summary.txt список файлов с расширением *.txt
 # находящихся в task, включая поддиректории
 find . -type f -name "*.txt" > dir1/summary.txt
